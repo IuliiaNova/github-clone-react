@@ -1,3 +1,5 @@
+@import './sass/variables';
+
 :root {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -5,7 +7,7 @@
 
 
   color-scheme: light dark;
-  background-color: rgb(29, 29, 29);
+  background-color: $dark-gray;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
