@@ -1,0 +1,49 @@
+@import '../../../sass/variables';
+
+.sidebar__nav{
+  position: fixed;
+  width: calc(30vw - 150px);
+  height: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+
+  &--img{
+    border-radius: 100%;
+    width: 350px;
+    margin-left: 15%;
+    margin-top: 18%;
+    border: 1px solid $light-gray;
+ 
+   
+  }
+
+  &--span{
+    margin: 20px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    width: 350px;
+    margin-left: 15%;
+    color: $letters-gray;
+  }
+
+  &--btn{
+    background-color: $middle-gray;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 350px;
+    margin-left: 15%;
+    margin-top: 10px;
+    color: rgb(163, 163, 163);
+    
+  }
+
+}
