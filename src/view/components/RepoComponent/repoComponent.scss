@@ -1,0 +1,96 @@
+@import '../../../sass/variables';
+
+.repo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40rem;
+  margin-left: 25%;
+  padding: 15px;
+  border-bottom: 1px solid $light-gray;
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+    &--firstline {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+
+      &--name {
+        font-size: 2.3rem;
+        color: $letters;
+      }
+
+      &--visib {
+        font-size: 1.1rem;
+        color: $letters-gray;
+        border: 1px solid $light-gray;
+        border-radius: 15px;
+        padding: 2px 6px;
+        font-weight: 600;
+      }
+    }
+
+    &--secondline {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: row;
+      font-size: 1.1rem;
+      color: $letters-gray;
+      gap: 20px;
+
+      &--lenguaje {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+
+        &--color {
+          width: 15px;
+          height: 15px;
+          background: rgb(7, 166, 224);
+          border-radius: 100%;
+        }
+      }
+
+    }
+
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+
+    &--btn {
+      width: 100px;
+      background-color: $middle-gray;
+      border: 1px solid $light-gray;
+      border-radius: 10px;
+      padding: 8px 0;
+      font-size: 1.1rem;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      color: $btn-gray;
+    }
+
+    &--hr{
+      width: 200px;
+      margin-top: 25px;
+      border-color: green;
+    }
+  }
+
+}
+
+.icon {
+  font-size: 1.5rem;
+}
