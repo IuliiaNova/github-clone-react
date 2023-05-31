@@ -1,5 +1,5 @@
-import React from "react"
 import HelmetSEO from "../../utils/HelmetSEO"
+import UserProfile from "../../components/UserProfile/UserProfile"
 
 const HomePage = () => {
  
@@ -10,7 +10,7 @@ const HomePage = () => {
       description='GitRepos Profile information'
     >
       
-   <div> Algo de usuario </div>
+   <UserProfile />
 
 
     </HelmetSEO>
