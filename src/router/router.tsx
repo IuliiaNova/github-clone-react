@@ -1,9 +1,7 @@
-import React from "react";
 import { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const BasicLayout = lazy(() => import('../view/layout/BasicLayout')); 
-
+const BasicLayout = lazy(() => import('../view/layout/BasicLayout'));
 const HomePage = lazy(() => import('../view/pages/HomePage/HomePage'));
 const ReposPage = lazy(() => import('../view/pages/ReposPage/ReposPage'));
 const StarsPage = lazy(() => import('../view/pages/StarsPage/StarsPage'));
