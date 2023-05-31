@@ -1,0 +1,55 @@
+@import '../../../sass/variables';
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  right: 0;
+  height: 10vh;
+  margin: 0;
+  border-bottom: 1px solid $light-gray;
+  z-index: 1;
+  background-color: $dark-gray;
+  font-family: 'Righteous', cursive;
+
+  &__nav {
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      margin-left: 30%;
+      margin-top: 80px;
+
+
+      &__item {
+        color: white;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        
+      }
+
+    }
+  }
+}
+
+.active {
+  // background: linear-gradient(to right, yellow, orange);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  padding-bottom: 20px;
+  border-bottom: 3px solid orange;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
