@@ -1,9 +1,10 @@
 
 export interface RepoContent {
+  id: number,
   name: string, 
   visibility: string, 
-  lenguaje: string, 
-  updated: string
+  languages_url: string, 
+  updated_at: Date
 }
 
 export interface RepoComponentProps {
