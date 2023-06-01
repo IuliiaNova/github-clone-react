@@ -5,3 +5,10 @@ export const getlUser = async (): Promise<User> => {
 	const data = await response.json()
 	return data
 }
+
+export const getUserInfoAPI = async (): Promise<any> => {
+	const response = await fetch('https://api.github.com/users/IuliiaNova')
+	const data = await response.json()
+	return data
+}
+

@@ -8,5 +8,5 @@ export interface RepoContent {
 }
 
 export interface RepoComponentProps {
-  content: RepoContent;
+  repos: RepoContent;
 }
