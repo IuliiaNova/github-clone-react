@@ -1,13 +1,13 @@
-import { getUserInfoAPI } from "../../api/user/user.api";
+import { getUserInfoAPI, getUserAPI } from "../../api/user/user.api";
 import { GET_USER } from "./user.types";
 
 export async function getUserAction(dispatch: any) {
 	try {
-		const response = await getUserInfoAPI()
+		const response = await getUserAPI()
 		
 			return dispatch({
 				type: GET_USER,
-				payload: response
+				payload: response.user[0]
 			})
 			
 	} catch (err) {

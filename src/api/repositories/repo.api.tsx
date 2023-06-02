@@ -4,3 +4,9 @@ export const getAllReposAPI = async (): Promise<any> => {
 	const data = await response.json()
 	return data
 }
+
+export const getReposAPI = async (): Promise<any> => {
+	const response = await fetch('http://localhost:4000/api/v1/get-repos')
+	const data = await response.json()
+	return data
+}

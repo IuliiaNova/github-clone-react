@@ -1,13 +1,13 @@
-import { getAllReposAPI } from "../../api/repositories/repo.api"
+import { getAllReposAPI, getReposAPI } from "../../api/repositories/repo.api"
 import { GET_ALL_REPOS } from "./repo.types"
 
 export async function getAllReposAction(dispatch: any) {
 	try {
-		const response = await getAllReposAPI()
+		const response = await getReposAPI()
 		
 			return dispatch({
 				type: GET_ALL_REPOS,
-				payload: response
+				payload: response.repo
 			})
 			
 	} catch (err) {
