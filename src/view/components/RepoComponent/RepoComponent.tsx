@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './repoComponent.scss'
 import { RepoComponentProps } from '../../../interfaces/RepoContent'
 import { RiStarSLine } from "react-icons/ri"
+import moment from 'moment'
 
-const RepoComponent: React.FC<RepoComponentProps> = ({ content }) => {
-  const { name, visibility, lenguaje, updated } = content
+const RepoComponent: React.FC<RepoComponentProps> = ({ _id, name, visibility, language, updatedAt }) => {
+  
 
+ const formatedData = moment(updatedAt).fromNow()
+  
   return (
-    <div className="repo">
+    <div className="repo" key={_id}>
       <div className="repo__right">
         <div className="repo__right--firstline">
           <span className="repo__right--firstline--name">{name}</span>
@@ -16,9 +19,9 @@ const RepoComponent: React.FC<RepoComponentProps> = ({ content }) => {
         <div className="repo__right--secondline">
           <div className="repo__right--secondline--lenguaje">
             <div className="repo__right--secondline--lenguaje--color"/>
-            <span className="repo__right--secondline--lenguaje--name">{lenguaje}</span>
+            <span className="repo__right--secondline--lenguaje--name">{language}</span>
           </div>
-          <span className="repo__right--secondline--undated">{updated}</span>
+          <span className="repo__right--secondline--undated">{formatedData}</span>
         </div>
       </div>
 
