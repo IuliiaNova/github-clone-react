@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@octokit/rest": "^19.0.11",
+    "antd": "^5.5.2",
     "isomorphic-fetch": "^3.0.0",
+    "moment": "^2.29.4",
     "octokit": "^2.0.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
