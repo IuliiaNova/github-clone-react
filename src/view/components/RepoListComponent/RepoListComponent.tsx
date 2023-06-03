@@ -1,11 +1,10 @@
-import { useEffect, useContext } from 'react';
-import RepoContext from '../../../context/repos/ReposContext';
-import RepoComponent from '../RepoComponent/RepoComponent';
+import RepoComponent from '../RepoComponent/RepoComponent'
+import './repoListComponent.scss'
 
 const RepoListComponent = ({repos}: any) => {
 
   return (
-    <div>
+    <div className='repo-list'>
       {repos.map((repo) => (
         <RepoComponent
           key={repo._id}

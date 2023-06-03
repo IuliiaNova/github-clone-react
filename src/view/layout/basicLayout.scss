@@ -1,9 +1,24 @@
-.basic-layout__main{
+.basic-layout__main {
   position: relative;
-  top: 150px;
+  top: 45px;
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin-left: 5vw;
+  margin-left: 200px;
+  padding-bottom: 80px;
+
+  @media (max-width: 700px) {
+    width: 80vw;
+    margin-left: 0;
+    width: 100vw;
+  }
+
+  &--content {
+    width: 100%;
+
+    @media (max-width: 700px) {
+      margin-left: 0;
+      width: 100vw;
+    }
+  }
 
 }

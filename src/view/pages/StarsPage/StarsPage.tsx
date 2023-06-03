@@ -1,5 +1,5 @@
-import React from "react"
 import HelmetSEO from "../../utils/HelmetSEO"
+import StarsComponent from "../../components/StarsComponent/StarsComponent"
 
 const StarsPage = () => {
  
@@ -10,9 +10,7 @@ const StarsPage = () => {
       description='GitRepos all stars'
     >
       
-    {/* <div><Repolist content={}/> </div> */}
-
-
+   <StarsComponent />
     </HelmetSEO>
   )
 }

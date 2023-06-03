@@ -5,10 +5,23 @@ import { RiStarSLine } from "react-icons/ri"
 import moment from 'moment'
 
 const RepoComponent: React.FC<RepoComponentProps> = ({ _id, name, visibility, language, updatedAt }) => {
-  
 
- const formatedData = moment(updatedAt).fromNow()
-  
+  const formatedData = moment(updatedAt).fromNow()
+  const [bgColor, setBgColor]= useState('')
+
+  useEffect(()=>{
+    if(language === 'JavaScript'){
+      setBgColor('orange')
+    } else if (language === 'TypeScript'){
+      setBgColor('#348EDD')
+    } else if (language === 'PHP'){
+      setBgColor('violet')
+    } else {
+      setBgColor('grey')
+    }
+
+  }, [language])
+
   return (
     <div className="repo" key={_id}>
       <div className="repo__right">
@@ -18,7 +31,7 @@ const RepoComponent: React.FC<RepoComponentProps> = ({ _id, name, visibility, la
         </div>
         <div className="repo__right--secondline">
           <div className="repo__right--secondline--lenguaje">
-            <div className="repo__right--secondline--lenguaje--color"/>
+            <div className="repo__right--secondline--lenguaje--color" style={{backgroundColor: bgColor}}/>
             <span className="repo__right--secondline--lenguaje--name">{language}</span>
           </div>
           <span className="repo__right--secondline--undated">{formatedData}</span>
@@ -26,8 +39,8 @@ const RepoComponent: React.FC<RepoComponentProps> = ({ _id, name, visibility, la
       </div>
 
       <div className="repo__left">
-        <button className="repo__left--btn"><RiStarSLine className='icon'/>Star</button>
-        <hr className="repo__left--hr"/>
+        <button className="repo__left--btn"><RiStarSLine className='icon' />Star</button>
+        <hr className="repo__left--hr" />
       </div>
     </div>
   )

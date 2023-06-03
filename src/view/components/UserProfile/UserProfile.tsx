@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useContext } from "react"
 import UserContext from "../../../context/user/UserContext"
+import './userPage.scss'
 
 function UserProfile() {
 
@@ -11,7 +12,7 @@ function UserProfile() {
   }, [user])
 
   return (
-    <div>
+    <div className="user-page">
       <span>About:</span>
       
     </div> 

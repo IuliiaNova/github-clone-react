@@ -10,7 +10,16 @@
   border-bottom: 1px solid $light-gray;
   z-index: 1;
   background-color: $dark-gray;
-  font-family: 'Righteous', cursive;
+  font-family: $font-family_body;
+
+  @media (max-width: 700px) {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    right: 0;
+    height: 10vh;
+    margin: 0;
+  }
 
   &__nav {
 
@@ -18,7 +27,7 @@
       display: flex;
       flex-direction: row;
       gap: 50px;
-      margin-left: 30%;
+      margin-left: 420px;
       margin-top: 80px;
 
 
@@ -30,7 +39,17 @@
         justify-content: center;
         align-items: center;
         gap: 3px;
-        
+
+        &--span {
+          border: 1px solid $light-gray;
+          background-color: $light-gray;
+          padding: 0 5px;
+          margin-left: 5px;
+          border-radius: 50%;
+          font-size: 1.2rem;
+
+        }
+
       }
 
     }
@@ -42,7 +61,7 @@
   // -webkit-background-clip: text;
   // -webkit-text-fill-color: transparent;
   padding-bottom: 20px;
-  border-bottom: 3px solid orange;
+  border-bottom: 3px solid $orange;
 
 }
 

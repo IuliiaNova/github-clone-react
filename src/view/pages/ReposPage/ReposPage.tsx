@@ -5,6 +5,7 @@ import RepoContext from "../../../context/repos/ReposContext"
 import { useContext, useState } from 'react'
 import { Select } from 'antd';
 import filtredRepos from "../../components/ButtonsFilter/ButtonsFilter"
+import { RiBook2Line } from "react-icons/ri";
 
 const ReposPage = () => {
 
@@ -30,7 +31,7 @@ const ReposPage = () => {
     setSearchValue(event.target.value)
   }
 
-  const filtred = filtredRepos({repos, typeFilter, languageFilter, sortFilter, searchValue})
+  const filtred = filtredRepos({ repos, typeFilter, languageFilter, sortFilter, searchValue })
 
   return (
     <HelmetSEO
@@ -38,18 +39,25 @@ const ReposPage = () => {
       description='GitRepos all epositories'
     >
       <div className="repos-page">
-        <div>
-          <input 
-          type="text" 
-          placeholder="Find a repository..." 
-          value={searchValue}
-          onChange={handleSearchChange}/>
+        <div className="repos-page__filtors">
+          <input
+            type="text"
+            placeholder="Find a repository..."
+            value={searchValue}
+            onChange={handleSearchChange} 
+            className="repos-page__filtors--input"/>
+
           <Select
             showSearch
-            style={{ width: 200 }}
+            style={{ width: 100}}
             placeholder="Type"
             optionFilterProp="children"
+            filterOption={(input, option) => (option?.label ?? '').toLowerCase().includes(input)}
+            filterSort={(optionA, optionB) =>
+              (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
+            }
             onChange={handleTypeChange}
+            className="repos-page__filtors--select"
             options={[
               {
                 value: 'All',
@@ -68,10 +76,15 @@ const ReposPage = () => {
 
           <Select
             showSearch
-            style={{ width: 200 }}
+            style={{ width: 150 }}
             placeholder="Language"
             optionFilterProp="children"
+            filterOption={(input, option) => (option?.label ?? '').toLowerCase().includes(input)}
+            filterSort={(optionA, optionB) =>
+              (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
+            }
             onChange={handleLanguageChange}
+            className="repos-page__filtors--select"
             options={[
               {
                 value: '',
@@ -98,10 +111,15 @@ const ReposPage = () => {
 
           <Select
             showSearch
-            style={{ width: 200 }}
+            style={{ width: 130 }}
             placeholder="Sort"
             optionFilterProp="children"
+            filterOption={(input, option) => (option?.label ?? '').toLowerCase().includes(input)}
+            filterSort={(optionA, optionB) =>
+              (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
+            }
             onChange={handleSortChange}
+            className="repos-page__filtors--select"
             options={[
               {
                 value: 'Last updated',
@@ -114,7 +132,7 @@ const ReposPage = () => {
             ]}
           />
 
-          <button>NEW</button>
+          <button className="repos-page__filtors--btn"><RiBook2Line />NEW</button>
         </div>
 
 
