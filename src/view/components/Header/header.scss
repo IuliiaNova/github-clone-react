@@ -19,6 +19,7 @@
     right: 0;
     height: 10vh;
     margin: 0;
+    height: 4vh;
   }
 
   &__nav {
@@ -29,6 +30,12 @@
       gap: 50px;
       margin-left: 420px;
       margin-top: 80px;
+
+      @media (max-width: 700px) {
+        margin-left: 0;
+        gap: 15px;
+        margin-top: 40px;
+      }
 
 
       &__item {
@@ -47,7 +54,11 @@
           margin-left: 5px;
           border-radius: 50%;
           font-size: 1.2rem;
+        }
 
+        &:hover{
+          color: $orange;
+          opacity: 0.9;
         }
 
       }
