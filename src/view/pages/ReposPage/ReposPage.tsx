@@ -5,11 +5,13 @@ import RepoContext from "../../../context/repos/ReposContext"
 import { useContext, useState } from 'react'
 import { Select } from 'antd';
 import filtredRepos from "../../components/ButtonsFilter/ButtonsFilter"
-import { RiBook2Line } from "react-icons/ri";
+import { RiBook2Line } from "react-icons/ri"
+import UserContext from "../../../context/user/UserContext"
 
 const ReposPage = () => {
 
   const { repos } = useContext(RepoContext)
+  const { user } = useContext(UserContext)
 
   const [typeFilter, setTypeFilter] = useState('All')
   const [languageFilter, setLanguageFilter] = useState('')
@@ -44,12 +46,12 @@ const ReposPage = () => {
             type="text"
             placeholder="Find a repository..."
             value={searchValue}
-            onChange={handleSearchChange} 
-            className="repos-page__filtors--input"/>
+            onChange={handleSearchChange}
+            className="repos-page__filtors--input" />
 
           <Select
             showSearch
-            style={{ width: 100}}
+            style={{ width: 130 }}
             placeholder="Type"
             optionFilterProp="children"
             filterOption={(input, option) => (option?.label ?? '').toLowerCase().includes(input)}
@@ -131,12 +133,19 @@ const ReposPage = () => {
               }
             ]}
           />
-
           <button className="repos-page__filtors--btn"><RiBook2Line />NEW</button>
         </div>
 
+        {filtred.length > 0 ? (
+          <>
+            {searchValue || typeFilter === 'Private' || typeFilter === 'Public' || languageFilter !== '' ? (
+              <span className="repos-page__match">{filtred.length} results for repositories matching {searchValue}</span>
+            ) : null}
+            <RepoListComponent repos={filtred} searchValue={searchValue} />
+          </>
+        ) : <span className="repos-page__match">{user.nickname} doesn’t have any repositories that match.</span>}
 
-        <RepoListComponent repos={filtred} />
+
       </div>
 
 

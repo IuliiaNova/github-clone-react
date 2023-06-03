@@ -3,7 +3,7 @@
 .repos-page {
   max-width: 730px;
   margin-top: 10vh;
-  margin-left: 85px;
+  margin-left: 200px;
 
   @media (max-width: 700px) {
     margin-top: 0;
@@ -18,6 +18,7 @@
     gap: 5px;
     padding-bottom: 20px;
     border-bottom: 1px solid $orange;
+    margin-bottom: 20px;
 
     @media (max-width: 700px) {
       display: grid;
@@ -41,7 +42,7 @@
       padding-left: 10px;
       border-radius: 5px;
       font-size: 1.2rem;
-      color: $light-gray;
+      color: white;
 
       @media (max-width: 700px) {
         grid-row: 1;
@@ -79,6 +80,14 @@
       }
     }
   }
+
+  &__match{
+    font-size: 1.5rem;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
 }
 
 .ant-select-show-search:where(.css-dev-only-do-not-override-k7429z).ant-select:not(.ant-select-customize-input) .ant-select-selector {
@@ -92,6 +101,8 @@
     margin-top: 10px;
     
   }
+
+  
 }
 
 
