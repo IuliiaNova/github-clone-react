@@ -5,12 +5,9 @@ import img from '../../../assets/img/avatar_gh.jfif'
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 
-
-
 const Sidebar = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false)
   const { user } = useContext(UserContext)
-  console.log(user)
 
   return (
     <nav className='sidebar__nav'>
@@ -19,7 +16,7 @@ const Sidebar = () => {
       <div className='sidebar__nav--follow'>
         <MdOutlinePeopleAlt className='icon-follow' />
         <span className='follow'>{user.followers}</span>
-        <span>followers</span> ~ 
+        <span>followers</span> ~
         <span className='follow'>{user.following}</span>
         <span>following</span>
       </div>
@@ -28,11 +25,10 @@ const Sidebar = () => {
       {toggleDropdown ? (
         <div>
 
-          <span className='sidebar__nav--location'><CiLocationOn className='icon-location'/>{user.location}</span>
+          <span className='sidebar__nav--location'><CiLocationOn className='icon-location' />{user.location}</span>
 
         </div>
       ) : null}
-
     </nav>
   )
 }

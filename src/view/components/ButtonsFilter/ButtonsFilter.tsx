@@ -7,12 +7,12 @@ const filtredRepos = ({
   sortFilter,
   searchValue
 }: {
-    repos: Repo[];
-    typeFilter: string,
-    languageFilter: string,
-    sortFilter: string,
-    searchValue: string
-  }): Repo[] => {
+  repos: Repo[];
+  typeFilter: string,
+  languageFilter: string,
+  sortFilter: string,
+  searchValue: string
+}): Repo[] => {
 
   return repos && repos.filter((repo: Repo) => {
 
@@ -28,19 +28,19 @@ const filtredRepos = ({
       }
     }
 
-    if(searchValue.length >= 3){
+    if (searchValue.length >= 3) {
       return repo.name.toLowerCase().includes(searchValue.toLowerCase())
     }
 
     return true
   }).sort((repoA: Repo, repoB: Repo) => {
     if (sortFilter === 'Last updated') {
-      if(repoA.updated_at){
+      if (repoA.updated_at) {
         return new Date(repoB.updated_at).getTime() - new Date(repoA.updated_at).getTime()
       } else {
         return new Date(repoB.updatedAt).getTime() - new Date(repoA.updatedAt).getTime()
       }
-      
+
     } else if (sortFilter === 'Name') {
       return repoA.name.localeCompare(repoB.name)
     }

@@ -1,5 +1,3 @@
-import { User } from "../../interfaces/User"
-
 
 export const getUserInfoAPI = async (): Promise<unknown> => {
 	const response = await fetch('https://api.github.com/users/IuliiaNova')

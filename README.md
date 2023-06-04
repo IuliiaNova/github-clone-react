@@ -68,17 +68,31 @@ Follow the steps below to set up the development environment:
 
 The development server will start, and the application will be available in your browser at http://localhost:5173 (or other, check it in your terminal)
 
+## Test with Jest
+
+To run test ``npx jest``
+
+You can see tests in the folder ``./src/__test__``. There I'm testing my APIs
+
+- Test FAILED
+
+![Failed](./src/assets/jest/jest.png)
+
+- Test PASSED
+
+![Passed](./src/assets/jest/jest_ok.png)
+
 ## Data
 
 **Important!** There are two ways to get data for web: 
 
 1. from GitHub API:
-   - in his case you need to create a token in GitHub and save it in **.env**. It is also possible to use API without token, but remebrer that you will hace limits of use. Find more about this on official site ![GinHubAPI](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+   - in his case you need to create a token in GitHub and save it in **.env**. It is also possible to use API without token, but remebrer that you will have limits of use. Find more about this on official site ![GitHubAPI](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
 2. from own backend and MongoDB:
-   - First of all you need enter to ``src -> reducer -> repos -> repo.actions.ts`` and comment action with API and delete comment of own API
+   - First of all you need enter to ``src/reducer/repos/repo.actions.ts`` and comment action with API and delete comment of own API
    ![Action](./src/assets/action.png)
-   - Then make the same here ``src -> reducer -> user -> user.action.ts`` and comment action with API and delete comment of own API
+   - Then make the same here ``src/reducer/user/user.action.ts`` and comment action with API and delete comment of own API
 
 ## Project Structure
 The project follows a standard folder and file structure for a React application. Below is a description of the most important directories:
@@ -110,11 +124,16 @@ The project follows a standard folder and file structure for a React application
 
 ![Mobile](./src/assets/mob_github.png)
 
-## Furute improvement
+## Future improvement
 
 - Stars page 
-- CRUD repositories with own APIs from backend
-- Option to change user and get new data dynamically 
+- Implement more **actions** with repositorio: create, update, delete (consult **https://github.com/IuliiaNova/github-clone-node.git** for more information)
+- Option to **change user** and get new data dynamically 
+
+## Similar projects
+
+I also ofer you to visit my [GitHub](https://github.com/IuliiaNova) and see my other projects,
+for example MERN Fullstack [Gif Strom](https://github.com/IuliiaNova/gif-storm-node.git) where you can find, share and upload gifs.
 
 ### Contact
 If you have any questions or inquiries related to the project, feel free to contact us via the following email address: **yshihanova@gmail.com**
