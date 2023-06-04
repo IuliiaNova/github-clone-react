@@ -56,6 +56,22 @@
     }
   }
 
+  &--spann {
+    margin: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    width: 250px;
+    margin-left: 15%;
+    color: rgb(163, 163, 163);
+
+    @media (max-width: 700px) {
+      margin: 0;
+      margin-left: 15px;
+      margin-bottom: 35px;
+
+    }
+  }
+
   &--btn {
     background-color: $middle-gray;
     border: 1px solid $light-gray;
@@ -78,9 +94,10 @@
       font-size: 0.9rem;
     }
 
-    &:hover{
+    &:hover {
       background-color: $light-gray;
       border-color: $repo-name;
+      color: white;
     }
 
   }

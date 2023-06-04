@@ -4,9 +4,9 @@ import { RepoComponentProps } from '../../../interfaces/RepoContent'
 import { RiStarSLine } from "react-icons/ri"
 import moment from 'moment'
 
-const RepoComponent: React.FC<RepoComponentProps> = ({ _id, name, visibility, language, updatedAt }) => {
+const RepoComponent: React.FC<RepoComponentProps> = ({ id, name, visibility, language, updated_at }) => {
 
-  const formatedData = moment(updatedAt).fromNow()
+  const formatedData = moment(updated_at).fromNow()
   const [bgColor, setBgColor]= useState('')
 
   useEffect(()=>{
@@ -23,7 +23,7 @@ const RepoComponent: React.FC<RepoComponentProps> = ({ _id, name, visibility, la
   }, [language])
 
   return (
-    <div className="repo" key={_id}>
+    <div className="repo" key={id}>
       <div className="repo__right">
         <div className="repo__right--firstline">
           <span className="repo__right--firstline--name">{name}</span>

@@ -2,7 +2,8 @@ interface Repo {
   name: string,
   visibility: string,
   language: string,
-  updatedAt: string
+  updated_at: string,
+  updatedAt: string,
 }
 
 const filtredRepos = ({
@@ -28,7 +29,7 @@ const filtredRepos = ({
     }
 
     if (languageFilter !== '') {
-      if (repo.language.trim() !== languageFilter) {
+      if (repo.language !== languageFilter) {
         return false
       }
     }
@@ -44,7 +45,12 @@ const filtredRepos = ({
     return true
   }).sort((repoA: Repo, repoB: Repo) => {
     if (sortFilter === 'Last updated') {
-      return new Date(repoB.updatedAt).getTime() - new Date(repoA.updatedAt).getTime()
+      if(repoA.updated_at){
+        return new Date(repoB.updated_at).getTime() - new Date(repoA.updated_at).getTime()
+      } else {
+        return new Date(repoB.updatedAt).getTime() - new Date(repoA.updatedAt).getTime()
+      }
+      
     } else if (sortFilter === 'Name') {
       return repoA.name.localeCompare(repoB.name)
     }

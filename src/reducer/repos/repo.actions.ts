@@ -3,13 +3,23 @@ import { GET_ALL_REPOS } from "./repo.types"
 
 export async function getAllReposAction(dispatch: any) {
 	try {
-		const response = await getReposAPI()
+
+		// GitHub
+
+		const response = await getAllReposAPI()
+		return dispatch({
+			type: GET_ALL_REPOS,
+			payload: response
+		})
+
+		// DB with seeders
 		
-			return dispatch({
-				type: GET_ALL_REPOS,
-				payload: response.repo
-			})
-			
+		// const response = await getReposAPI()
+		// return dispatch({
+		// 	type: GET_ALL_REPOS,
+		// 	payload: response.repo
+		// })
+
 	} catch (err) {
 		console.log(err);
 	}

@@ -2,7 +2,7 @@ import HelmetSEO from "../../utils/HelmetSEO"
 import './reposPage.scss'
 import RepoListComponent from "../../components/RepoListComponent/RepoListComponent"
 import RepoContext from "../../../context/repos/ReposContext"
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { Select } from 'antd';
 import filtredRepos from "../../components/ButtonsFilter/ButtonsFilter"
 import { RiBook2Line } from "react-icons/ri"
@@ -17,6 +17,11 @@ const ReposPage = () => {
   const [languageFilter, setLanguageFilter] = useState('')
   const [sortFilter, setSortFilter] = useState('')
   const [searchValue, setSearchValue] = useState('')
+
+  useEffect(() => {
+    console.log(repos)
+
+  }, [repos])
 
 
   const handleTypeChange = (value: string) => {
@@ -51,7 +56,30 @@ const ReposPage = () => {
 
           <Select
             showSearch
-            style={{ width: 130 }}
+            style={{ width: 120 }}
+            placeholder="Sort"
+            optionFilterProp="children"
+            filterOption={(input, option) => (option?.label ?? '').toLowerCase().includes(input)}
+            filterSort={(optionA, optionB) =>
+              (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
+            }
+            onChange={handleSortChange}
+            className="repos-page__filtors--select"
+            options={[
+              {
+                value: 'Last updated',
+                label: 'Last updated',
+              },
+              {
+                value: 'Name',
+                label: 'Name',
+              }
+            ]}
+          />
+
+          <Select
+            showSearch
+            style={{ width: 135 }}
             placeholder="Type"
             optionFilterProp="children"
             filterOption={(input, option) => (option?.label ?? '').toLowerCase().includes(input)}
@@ -66,11 +94,11 @@ const ReposPage = () => {
                 label: 'All',
               },
               {
-                value: 'Public',
+                value: 'public',
                 label: 'Public',
               },
               {
-                value: 'Private',
+                value: 'private',
                 label: 'Private',
               }
             ]}
@@ -78,7 +106,7 @@ const ReposPage = () => {
 
           <Select
             showSearch
-            style={{ width: 150 }}
+            style={{ width: 135 }}
             placeholder="Language"
             optionFilterProp="children"
             filterOption={(input, option) => (option?.label ?? '').toLowerCase().includes(input)}
@@ -103,36 +131,11 @@ const ReposPage = () => {
               {
                 value: 'PHP',
                 label: 'PHP',
-              },
-              {
-                value: 'CSS',
-                label: 'CSS',
               }
             ]}
           />
 
-          <Select
-            showSearch
-            style={{ width: 130 }}
-            placeholder="Sort"
-            optionFilterProp="children"
-            filterOption={(input, option) => (option?.label ?? '').toLowerCase().includes(input)}
-            filterSort={(optionA, optionB) =>
-              (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())
-            }
-            onChange={handleSortChange}
-            className="repos-page__filtors--select"
-            options={[
-              {
-                value: 'Last updated',
-                label: 'Last updated',
-              },
-              {
-                value: 'Name',
-                label: 'Name',
-              }
-            ]}
-          />
+
           <button className="repos-page__filtors--btn"><RiBook2Line />NEW</button>
         </div>
 
@@ -143,7 +146,7 @@ const ReposPage = () => {
             ) : null}
             <RepoListComponent repos={filtred} searchValue={searchValue} />
           </>
-        ) : <span className="repos-page__match">{user.nickname} doesn’t have any repositories that match.</span>}
+        ) : <span className="repos-page__match">{user.login} doesn’t have any repositories that match</span>}
 
 
       </div>
