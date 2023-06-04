@@ -9,7 +9,7 @@ This is a MERN Web-first progect.
 
 ## Deployment
 
-[GitHub-clone-repos](https://main--frolicking-melomakarona-d95adc.netlify.app/)
+Welcome to web of the project [GitHub-clone-repos](https://main--frolicking-melomakarona-d95adc.netlify.app/)
 
 ## Key features of the application:
 
