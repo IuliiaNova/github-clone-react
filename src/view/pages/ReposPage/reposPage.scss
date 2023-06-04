@@ -137,9 +137,41 @@
   font-weight: 600;
 }
 
+.modal{
+  margin-right: 60%;
+  
+}
+
+:where(.css-dev-only-do-not-override-k7429z).ant-modal .ant-modal-content{
+  background-color: $dark-gray;
+  color:white;
+}
+
+
+
+.modal-container{
+  display: flex;
+    flex-direction: row;
+  &__owner{
+    display: flex;
+    flex-direction: column;
+    
+    &--user{
+     
+      img{
+        width: 30px;
+      }
+    }
+    
+  }
+  &__input{
+      display: flex;
+    flex-direction: column;
+    }
+}
+
 // .ant-select-dropdown{
 //   background-color: rgb(198, 198, 198);
- 
 // }
 
 

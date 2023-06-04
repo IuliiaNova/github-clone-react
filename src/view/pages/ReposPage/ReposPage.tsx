@@ -7,6 +7,7 @@ import { Select, Modal } from 'antd';
 import filtredRepos from "../../components/ButtonsFilter/ButtonsFilter"
 import { RiBook2Line } from "react-icons/ri"
 import UserContext from "../../../context/user/UserContext"
+import img from '../../../assets/img/avatar_gh.jfif'
 
 const ReposPage = () => {
 
@@ -136,20 +137,50 @@ const ReposPage = () => {
             ]}
           />
 
-
           <button className="repos-page__filtors--btn" onClick={() => setOpen(true)}><RiBook2Line />NEW</button>
-          <Modal
-        title="Modal 1000px width"
-        centered
-        open={open}
-        onOk={() => setOpen(false)}
-        onCancel={() => setOpen(false)}
-        width={1000}
-      >
-        <p>some contents...</p>
-        <p>some contents...</p>
-        <p>some contents...</p>
-      </Modal>
+
+          {/* <Modal
+            title="Create a new repository"
+            open={open}
+            onOk={() => setOpen(false)}
+            onCancel={() => setOpen(false)}
+            width={500}
+            className="modal"
+          >
+            <span className="modal-span">A repository contains all project files, including the revision history. </span>
+            <div className="modal-container">
+              <div className="modal-container__owner">
+                <p className="modal-container__owner--p">Owner</p>
+                <span className="modal-container__owner--user"><img src={user.avatar_url ? user.avatar_url : img}/>{user.login}</span>
+              </div>
+              <p> / </p>
+              <div className="modal-container__input">
+                <label htmlFor='repo-name' className="modal-container__input--label">Repository name:</label>
+                <input type='text' id='repo-name' className="modal-container__input--input"></input>
+              </div>
+            </div>
+            <div className="modal-container__radio">
+              <div>
+              <label htmlFor='radio-public'>Public</label>
+                <p>Anyone on the internet can see this repository. You choose who can commit.</p>
+                <input
+                  type='radio'
+                  name='radio-public'
+                  value='public' />  
+              </div>
+
+              <div>
+              <label htmlFor='radio-public'>Private</label>
+                <p>You choose who can see and commit to this repository.</p>
+                <input
+                  type='radio'
+                  name='radio-private'
+                  value='private' />  
+              </div>
+              
+            </div>
+
+          </Modal> */}
         </div>
 
         {filtred.length > 0 ? (

@@ -6,19 +6,19 @@ export async function getAllReposAction(dispatch: any) {
 
 		// GitHub
 
-		// const response = await getAllReposAPI()
-		// return dispatch({
-		// 	type: GET_ALL_REPOS,
-		// 	payload: response
-		// })
+		const response = await getAllReposAPI()
+		return dispatch({
+			type: GET_ALL_REPOS,
+			payload: response
+		})
 
 		// DB with seeders
 		
-		const response = await getReposAPI()
-		return dispatch({
-			type: GET_ALL_REPOS,
-			payload: response.repo
-		})
+		// const response = await getReposAPI()
+		// return dispatch({
+		// 	type: GET_ALL_REPOS,
+		// 	payload: response.repo
+		// })
 
 	} catch (err) {
 		console.log(err);
