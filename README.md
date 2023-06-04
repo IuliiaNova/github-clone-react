@@ -47,7 +47,8 @@ The development server will start, and the application will be available in your
 
 ## Data
 
-**Important!** There are two ways to get data to this web: 
+**Important!** There are two ways to get data for web: 
+
 1. from GitHub API:
    - in his case you need to create a token in GitHub and save it in **.env**. It is also possible to use API without token, but remebrer that you will hace limits of use. Find more about this on official site ![GinHubAPI](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
@@ -71,6 +72,13 @@ The project follows a standard folder and file structure for a React application
 
 ## Visualization 
 
+- Thr web is responsive and have two views: desktop and mobile (>700px)
+- **Basic layout** that includes 'sidebar' and 'header'. 
+- **Pages**: 
+    1. **Overviw**: User profile information
+    2. **Repositories**: Display all user repositories and make sort with filter of them
+    3. **Stars**: Display all repositories with stars by User
+
 **Desktop**
 
 ![Desktop](./src/assets/repoP.png)
@@ -81,7 +89,9 @@ The project follows a standard folder and file structure for a React application
 
 ## Furute improvement
 
-- Page to show all projects with stars + CRUD and functions
+- Stars page 
+- CRUD repositories with own APIs from backend
+- Option to change user and get new data dynamically 
 
 ### Contact
 If you have any questions or inquiries related to the project, feel free to contact us via the following email address: **yshihanova@gmail.com**
