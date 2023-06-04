@@ -1,9 +1,11 @@
-# GitHub CLONE
+# Frontend GitHub CLONE
 
 ## Project Description
 This project aims to create a user-friendly interface for displaying GitHub repositories and implementing a search functionality to filter repositories by name. By utilizing the official GitHub API, the application fetches repositories per user and presents them in a well-designed, responsive interface.
 
 GitHub repositories, though simple in concept, are an essential component for managing and showcasing code projects. This project adds value by offering a streamlined and intuitive user experience, taking inspiration from popular apps and the GitHub interface itself. The design principles of good user experience are followed to ensure a pleasant and efficient browsing experience for users.
+
+This is a MERN Web-first progect.
 
 ## Deployment
 
@@ -12,11 +14,28 @@ GitHub repositories, though simple in concept, are an essential component for ma
 ## Key features of the application:
 
 - Show reposotories by User: get all repositories from data base and display them,
-- Find by name: in a search bar you can search repository than you want, the result after 3 simbols put,
+
+![All-repos](./src/assets/show_all.png)
+
+- Find by name: in a search bar you can search repository that you want (the result will be get after put 3 simbols in a search bar),
+
+![Search-bar](./src/assets/search.png)
+
 - Filtering by type: All, public, private,
+
+![Visibility-bar](./src/assets/nomatch.png)
+
 - Filtering by Language: All, JavaScript, TypeScript, PHP,
-- Sorting by Name (A-Z) or Last updated,
-- Intuitive User Interface: The application offers a user-friendly and easy-to-use interface for an enjoyable user experience.
+
+![Languaje](./src/assets/lang.png)
+
+- Sorting by Name (A-Z) or Last updated (for default the orden is A-Z),
+
+![Sort](./src/assets/updated.png)
+
+- Intuitive User Interface: The application offers a user-friendly and easy-to-use interface for an enjoyable user experience,
+
+- Responsive: From window-width<700 the desing change for mobile version
 
 ## Technologies Used
 
@@ -25,9 +44,9 @@ The project is built using the following technologies:
 - TypeScript,
 - React: A JavaScript library for building user interfaces,
 - GitHub API: The official API provided by GitHub to access repository data,
----> !Then **GitHub API** was change to data from own DB,
-- HTML: The markup language used to structure the web pages,
+---> !It is possoble to change **GitHub API** to data from own backend and MongoDB,
 - SASS: The styling CSS extension used to customize the visual presentation,
+- Jest for testing,
 
 + antd: A library for building comonents,
 + moment: A library for working with Date,
