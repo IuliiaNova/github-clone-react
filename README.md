@@ -5,6 +5,10 @@ This project aims to create a user-friendly interface for displaying GitHub repo
 
 GitHub repositories, though simple in concept, are an essential component for managing and showcasing code projects. This project adds value by offering a streamlined and intuitive user experience, taking inspiration from popular apps and the GitHub interface itself. The design principles of good user experience are followed to ensure a pleasant and efficient browsing experience for users.
 
+## Deployment
+
+![GitHub-clone-repos](https://main--frolicking-melomakarona-d95adc.netlify.app/)
+
 ## Key features of the application:
 
 - Show reposotories by User: get all repositories from data base and display them,
