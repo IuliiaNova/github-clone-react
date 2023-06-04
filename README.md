@@ -60,7 +60,7 @@ The development server will start, and the application will be available in your
 ## Project Structure
 The project follows a standard folder and file structure for a React application. Below is a description of the most important directories:
 
-**figma**: Additional folder to store used Figma modeling,
+**figma**: Additional folder to store used Figma model and diagramm,
 
 **src**: Contains the main source code of the application.
 - **api**: functions to work with APIs,
