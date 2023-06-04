@@ -7,7 +7,7 @@ GitHub repositories, though simple in concept, are an essential component for ma
 
 ## Deployment
 
-![GitHub-clone-repos](https://main--frolicking-melomakarona-d95adc.netlify.app/)
+[GitHub-clone-repos](https://main--frolicking-melomakarona-d95adc.netlify.app/)
 
 ## Key features of the application:
 
