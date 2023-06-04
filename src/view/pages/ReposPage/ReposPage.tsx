@@ -3,7 +3,7 @@ import './reposPage.scss'
 import RepoListComponent from "../../components/RepoListComponent/RepoListComponent"
 import RepoContext from "../../../context/repos/ReposContext"
 import { useContext, useState, useEffect } from 'react'
-import { Select } from 'antd';
+import { Select, Modal } from 'antd';
 import filtredRepos from "../../components/ButtonsFilter/ButtonsFilter"
 import { RiBook2Line } from "react-icons/ri"
 import UserContext from "../../../context/user/UserContext"
@@ -17,6 +17,7 @@ const ReposPage = () => {
   const [languageFilter, setLanguageFilter] = useState('')
   const [sortFilter, setSortFilter] = useState('')
   const [searchValue, setSearchValue] = useState('')
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     console.log(repos)
@@ -136,7 +137,19 @@ const ReposPage = () => {
           />
 
 
-          <button className="repos-page__filtors--btn"><RiBook2Line />NEW</button>
+          <button className="repos-page__filtors--btn" onClick={() => setOpen(true)}><RiBook2Line />NEW</button>
+          <Modal
+        title="Modal 1000px width"
+        centered
+        open={open}
+        onOk={() => setOpen(false)}
+        onCancel={() => setOpen(false)}
+        width={1000}
+      >
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+      </Modal>
         </div>
 
         {filtred.length > 0 ? (
