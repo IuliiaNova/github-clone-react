@@ -3,7 +3,6 @@ import StarsComponent from "../../components/StarsComponent/StarsComponent"
 
 const StarsPage = () => {
  
-
   return (
     <HelmetSEO
       title={'GitRepos Stars'}

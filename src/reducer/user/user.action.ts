@@ -6,21 +6,21 @@ export async function getUserAction(dispatch: any) {
 
 		//GitHub API REST
 		
-		const response = await getUserInfoAPI()
+		// const response = await getUserInfoAPI()
 		
-			return dispatch({
-				type: GET_USER,
-				payload: response
-			})
+			// return dispatch({
+			// 	type: GET_USER,
+			// 	payload: response
+			// })
 
 		// DB with seeders
 
-		// const response = await getUserAPI()
+		const response = await getUserAPI()
 		
-		// 	return dispatch({
-		// 		type: GET_USER,
-		// 		payload: response.user[0]
-		// 	})
+			return dispatch({
+				type: GET_USER,
+				payload: response.user[0]
+			})
 			
 	} catch (err) {
 		console.log(err);

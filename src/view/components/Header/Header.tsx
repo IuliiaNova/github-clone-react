@@ -5,8 +5,6 @@ import { RiStarSLine, RiBook2Line, RiProfileLine } from "react-icons/ri";
 import RepoContext from '../../../context/repos/ReposContext';
 import {useContext} from 'react'
 
-
-
 const Header = () => {
   const {repos} = useContext(RepoContext)
   const location = useLocation();

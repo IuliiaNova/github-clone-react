@@ -3,7 +3,6 @@ import UserProfile from "../../components/UserProfile/UserProfile"
 
 const HomePage = () => {
  
-
   return (
     <HelmetSEO
       title={'GitRepos Profile'}
@@ -11,7 +10,6 @@ const HomePage = () => {
     >
       
    <UserProfile />
-
 
     </HelmetSEO>
   )

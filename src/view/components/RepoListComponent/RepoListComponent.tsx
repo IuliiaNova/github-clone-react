@@ -1,11 +1,12 @@
 import RepoComponent from '../RepoComponent/RepoComponent'
 import './repoListComponent.scss'
 import { useEffect, useState } from 'react'
+import { Lang, RepoComponentProps } from '../../../interfaces/RepoContent'
 
 
-const RepoListComponent = ({repos}: any) => {
+const RepoListComponent = ({repos}: RepoComponentProps) => {
 
-  const [languages, setLanguages] = useState<any>({})
+  const [languages, setLanguages] = useState<Lang>({})
 
   useEffect(()=>{
     const fetchLang = async ()=>{

@@ -1,10 +1,4 @@
-interface Repo {
-  name: string,
-  visibility: string,
-  language: string,
-  updated_at: string,
-  updatedAt: string,
-}
+import { Repo } from "../../../interfaces/RepoContent"
 
 const filtredRepos = ({
   repos,
@@ -37,10 +31,6 @@ const filtredRepos = ({
     if(searchValue.length >= 3){
       return repo.name.toLowerCase().includes(searchValue.toLowerCase())
     }
-
-    // if(languageFilter !== '' && languageFilter.length === 0){
-    //   return console.log('No hay repositories con lenguaje eligido')
-    // }
 
     return true
   }).sort((repoA: Repo, repoB: Repo) => {

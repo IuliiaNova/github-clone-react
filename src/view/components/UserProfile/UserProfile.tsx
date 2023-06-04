@@ -3,12 +3,13 @@ import UserContext from "../../../context/user/UserContext"
 import './userPage.scss'
 import { FaHandPeace } from "react-icons/fa"
 import RepoContext from "../../../context/repos/ReposContext"
+import { Lang } from "../../../interfaces/RepoContent"
 
 function UserProfile() {
 
   const { user } = useContext(UserContext)
   const { repos } = useContext(RepoContext)
-  const [languages, setLanguages] = useState<any>({})
+  const [languages, setLanguages] = useState<Lang>({})
 
   useEffect(()=>{
     const fetchLang = async ()=>{

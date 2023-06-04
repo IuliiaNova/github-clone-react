@@ -9,7 +9,6 @@ const Sidebar = () => {
   console.log(user)
 
   return (
-
       <nav className='sidebar__nav'>
         <img src={user.avatar_url ? user.avatar_url : img} alt='User avatar' className='sidebar__nav--img'/>
         <span className='sidebar__nav--span'>{user.login}</span>
@@ -23,7 +22,6 @@ const Sidebar = () => {
         ) : null}
         
       </nav>
-
   )
 }
 

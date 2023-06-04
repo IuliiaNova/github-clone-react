@@ -4,7 +4,6 @@ import initialUserState from './initialUserState'
 import { userReducer } from '../../reducer/user/user.reducer'
 import { getUserAction } from '../../reducer/user/user.action'
 
-
 export interface ChildrenProps {
   children: React.ReactNode
 }
@@ -20,7 +19,6 @@ export default function UserProvider(props: ChildrenProps) {
     }
     getUserInfo()
   }, [])
-
 
 
   const memoProvider = useMemo(
